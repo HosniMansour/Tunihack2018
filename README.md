@@ -12,6 +12,8 @@
 
 >npm install
 
+#Start server + client :
+
 > npm run start-dev
 
 
