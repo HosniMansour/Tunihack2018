@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <link href="img/favicon.png" rel="icon">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+
+    <link href="./lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Libraries CSS Files -->
+    <link href="./lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./lib/animate/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://js.arcgis.com/4.9/esri/css/main.css">
+
+    <!--  Stylesheet chatbot -->
+    <link href="css/bot.css" rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=en_RU&amp;apikey=<your API-key>" type="text/javascript"></script>
+    <style>
+      #map {
+        width: 100%; height: 785px; padding: 0; margin: 0;
+      }
+    </style>
+    <script>
+        ymaps.ready(init);
+        function init() {
+            // Creating the map.
+            var myMap = new ymaps.Map("map", {
+                center: [34.269, 9.429],
+                zoom: 6.3
+            }, {
+                searchControlProvider: 'yandex#search'
+            });
+            var myPlacemark = new ymaps.Placemark([33.8189700 , 10.1657900], {
+                balloonContentHeader: "Projets et Programmes nouveaux",
+                balloonContentBody: "3 217 000 Dinars",
+                hintContent: "The placemark hint",
+            iconContent: "Gabes"
+            }, {
+              preset: "islands#redStretchyIcon"
+            });
+            myMap.geoObjects.add(myPlacemark);
+            var myPlacemark2 = new ymaps.Placemark([34.7405600 , 10.7602800], {
+                balloonContentHeader: "Projets et Programmes nouveaux",
+                balloonContentBody: "1 595 000 Dinars",
+                hintContent: "The placemark hint",
+                iconContent: "Sfax"
+            }, {
+                preset: "islands#redStretchyIcon"
+            });
+            myMap.geoObjects.add(myPlacemark2);
+            var myPlacemark_Bizerte = new ymaps.Placemark([37.29 ,9.87], {
+                balloonContentHeader: "Projets et Programmes nouveaux",
+                balloonContentBody: "964 000 Dinars",
+                hintContent: "The placemark hint",
+                iconContent: "Bizert"
+            }, {
+                preset: "islands#redStretchyIcon"
+            });
+            myMap.geoObjects.add(myPlacemark_Bizerte);
+            var myPlacemark_Ariana = new ymaps.Placemark([36.8625,10.19556], {
+                balloonContentHeader: "Projets et Programmes nouveaux",
+                balloonContentBody: "448 000 Dinars",
+                hintContent: "The placemark hint",
+                iconContent: "Ariana"
+            }, {
+                preset: "islands#redStretchyIcon"
+            });
+            myMap.geoObjects.add(myPlacemark_Ariana);
+
+            var myPlacemark_Manouba  = new ymaps.Placemark([36.80778,10.10111], {
+                balloonContentHeader: "Projets et Programmes nouveaux",
+                balloonContentBody: "1 005 000 Dinars",
+                hintContent: "The placemark hint",
+                iconContent: "Manouba"
+            }, {
+                preset: "islands#redStretchyIcon"
+            });
+            myMap.geoObjects.add(myPlacemark_Manouba );
+            var myPlacemark_Ben_Arous  = new ymaps.Placemark([36.75333,10.2222], {
+                balloonContentHeader: "Projets et Programmes nouveaux",
+                balloonContentBody: "343 000 Dinars",
+                hintContent: "The placemark hint",
+                iconContent: "Ben Arous"
+            }, {
+                preset: "islands#redStretchyIcon"
+            });
+            myMap.geoObjects.add(myPlacemark_Ben_Arous );
+            view.goTo( {
+                zoom:6.6,
+                center: [10.1933700,34.1001200] });
+        }
+    </script>
+    <title>Tanit</title>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"></div>
+    <!-- JavaScript Libraries -->
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/jquery/jquery-migrate.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./lib/easing/easing.min.js"></script>
+    <script src="./lib/wow/wow.min.js"></script>
+    <script src="./lib/waypoints/waypoints.min.js"></script>
+    <script src="./lib/counterup/counterup.min.js"></script>
+    <script src="./lib/superfish/hoverIntent.js"></script>
+    <script src="./lib/superfish/superfish.min.js"></script>
+    <!-- Template Main Javascript File -->
+    <script src="./js/main.js"></script>
+
+  </body>
+</html>

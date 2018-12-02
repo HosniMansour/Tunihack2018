@@ -1,0 +1,28 @@
+{
+  "name": "timetracking",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "server-dev": "nodemon server/app.js",
+    "client-dev": "npm start --prefix client",
+	"chat-dev": "npm start --prefix chatbot",
+    "start-dev": "concurrently \"npm run server-dev\" \"npm run client-dev\" \"npm run chat-dev\""
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "express": "^4.16.4",
+    "http-errors": "~1.6.2",
+    "jade": "~1.11.0",
+    "mongoose": "^5.3.14",
+    "morgan": "^1.9.1",
+    "pow-mongodb-fixtures": "^0.14.0",
+    "react-chat-popup": "^1.1.2",
+    "react-chat-window": "^1.0.8"
+  },
+  "devDependencies": {
+    "concurrently": "^3.6.1",
+    "nodemon": "^1.18.7"
+  }
+}
